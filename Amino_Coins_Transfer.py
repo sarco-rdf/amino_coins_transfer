@@ -5,11 +5,11 @@
 
 #########################################
 import aminofix                         #
-import os                               #
-import signal                           # Dependencias instalarlas con: pip install (nombre de la libreria)
+import os                               # Dependencias instalarlas con: pip install (nombre de la libreria)
+import signal                           # El la libreria de aminofix se instala bajo el nombre: amino.fix
 import time                             # En caso de tener la libreria y que de error
 from pyfiglet import figlet_format      # Actualizarla con: pip install --upgrade (nombre de la libreria)
-from colored import fore, style         # 
+from colored import fore, style         # Los modulos os, time y signal, son parte de python3 (No necesitan ser instalados)
 from tqdm import tqdm                   #
 #########################################
 
