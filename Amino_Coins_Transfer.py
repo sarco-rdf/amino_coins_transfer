@@ -177,7 +177,8 @@ def transfer_mode(client):
        print("2.Transfer Blog (Maximo 5000)")                   #
        print("3.Transfer Wiki (Maximo 5000)")                   # Muestra las opciones de tranferencia
        print("4.Transfer Chat (Maximo 5000)")                   #
-       print("5.Salir")                                         #
+       print("5.Cambio de cuenta")                              #
+       print("6.Salir")                                         #
        print("") # Genera un espacio para que se visualice mejor
        select = input("Type Number: ") # Obtiene la opcion seleccionada y la envia a la correspondente solicitud
        if select == "1": # Ejecuta la opcion de Transfer Vip
@@ -200,10 +201,13 @@ def transfer_mode(client):
            print("SOLO CON VALORES MULTIPLOS DE 500") # Informa con que condiciones se debe escrbir el valor de la transferencia
            print("") # Genera un espacio para que se visualice mejor
            chats(client) # Solicita la transferencia mediante Chats
-       elif select == "5": # Ejecuta la opcion de Salir
+       elif select == "5": # Ejecuta la opcion de Realizar otra operacion
+           reload() # Solicita la funcion reload   
+       elif select == "6": # Ejecuta la opcion de Salir
            print("") # Genera un espacio para que se visualice mejor
            print("Good Bye") # Muestra la despedida
            send_ctrl_c() # Va a la funcion salir
+
 
 # Funcion de login
 
