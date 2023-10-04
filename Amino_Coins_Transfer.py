@@ -1,7 +1,7 @@
 #  By Sarco
 #    _;)  ~~8:> ~~8:>
 #  Contributors: Ryo, and IA by Openai.com 
-#  https://github.com/sarco-rdf/amino_coins_trasfer
+#  https://github.com/sarco-rdf/amino_coins_transfer
 
 #########################################
 import aminofix                         #
