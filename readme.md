@@ -8,4 +8,6 @@ Los mismos se podran instalar con el comando pip install (nombre del modulo).
 
 En el caso de aminofix, se instala bajo el nombre de amino.fix
 
+Tutoriar Android: https://youtu.be/w_dwYj-yvls
+
 Bye Sarco.
