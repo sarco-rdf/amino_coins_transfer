@@ -4,9 +4,9 @@
 #  https://github.com/sarco-rdf/amino_coins_transfer
 
 #########################################
-import aminofix                         #
+import aminofixed                       #
 import os                               # Dependencias instalarlas con: pip install (nombre de la libreria)
-import signal                           # El la libreria de aminofix se instala bajo el nombre: amino.fix
+import signal                           # El la libreria de aminofixed se instala bajo el nombre: amino.fixed
 import time                             # En caso de tener la libreria y que de error
 from pyfiglet import figlet_format      # Actualizarla con: pip install --upgrade (nombre de la libreria)
 from colored import fore, style         # Los modulos os, time y signal, son parte de python3 (No necesitan ser instalados)
@@ -49,7 +49,7 @@ def vip(client):
         client.join_community(comId = communityid) # Entra a la comunidad donde se encuentra el Vip
     except:
         print("Enviando coins...")
-    sub_client = aminofix.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
+    sub_client = aminofixed.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
     for i in tqdm(range(total // 500)): # Recupera el valor de coins indicado y envia las donaciones de 500 en 500 hasta completar el total
         try:
             sub_client.subscribe(userId= objeto, autoRenew= False) # Realiza una subcripcion al vip mediante la api y la renueva multiples veces hasta enviar el total de coins indicado
@@ -82,7 +82,7 @@ def blogs(client):
         client.join_community(comId = communityid) # Entra a la comunidad donde se encuentra el Blog
     except:
         print("Enviando coins...")
-    sub_client = aminofix.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
+    sub_client = aminofixed.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
     for i in tqdm(range(total // 500)): # Recupera el valor de coins indicado y envia las donaciones de 500 en 500 hasta completar el total
         try:
             sub_client.send_coins(coins= 500, blogId= objeto) # Realiza el envio de coins mediante la api
@@ -115,7 +115,7 @@ def wikis(client):
         client.join_community(comId = communityid) # Entra a la comunidad donde se encuentra la Wiki
     except:
         print("Enviando coins...")
-    sub_client = aminofix.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
+    sub_client = aminofixed.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
     for i in tqdm(range(total // 500)): # Recupera el valor de coins indicado y envia las donaciones de 500 en 500 hasta completar el total
         try:
             sub_client.send_coins(coins= 500, objectId= objeto) # Realiza el envio de coins mediante la api
@@ -149,7 +149,7 @@ def chats(client):
         client.join_community(comId = communityid) # Entra a la comunidad donde se encuentra el Chat
     except:
         print("Enviando coins...")
-    sub_client = aminofix.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
+    sub_client = aminofixed.SubClient(comId=communityid, profile=client.profile) # Obtiene la informacion de la cuenta para poder donar
     for i in tqdm(range(total // 500)): # Recupera el valor de coins indicado y envia las donaciones de 500 en 500 hasta completar el total
         try:
             sub_client.send_coins(coins= 500, chatId= objeto) # Realiza el envio de coins mediante la api
@@ -213,7 +213,7 @@ def transfer_mode(client):
 
 while True: 
     credenciales = inicio() # Va a la funcion inicio y obtiene las credenciales necesarias
-    client = aminofix.Client() # Conexion con los servidores de amino (si estan caidos da un error de api)
+    client = aminofixed.Client() # Conexion con los servidores de amino (si estan caidos da un error de api)
     email = credenciales[1] # Recupera el email de la funcion inicio y lo lleva al cliente
     password = credenciales[2] # Recupera la password de la funcion inicio y lo lleva al cliente
     client.login(email, password) # Cliente. Usa las creedenciales cargadas para loguearse
